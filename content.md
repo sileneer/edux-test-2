@@ -6,7 +6,7 @@
 
 ## About me
 
-- Name to show: Sam Rivera
+- Name to show: Harry Rivera
 - What I study: History and English literature, first year
 - One sentence about me: I like old books, long walks, and asking "but why?" one more time than is polite.
 
