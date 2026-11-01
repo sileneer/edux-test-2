@@ -3,33 +3,220 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My EduX site</title>
+    <title>Sam Rivera — history, literature, and asking why</title>
+    <meta
+      name="description"
+      content="Sam Rivera studies history and English literature. A one-page site about the Socratic method and why it matters."
+    />
+    <meta name="color-scheme" content="light" />
     <style>
+      :root {
+        --paper: #faf9f5;
+        --ink: #1c1b19;
+        --muted: #6b675f;
+        --rule: #e3ded2;
+        --accent: #9c4b2b;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
       body {
         margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-        box-sizing: border-box;
-        background: #faf9f5;
-        color: #141413;
-        font-family: Georgia, "Times New Roman", serif;
-        text-align: center;
+        padding: 4rem 1.5rem 5rem;
+        background-color: var(--paper);
+        background-image: radial-gradient(
+          120% 80% at 50% 0%,
+          #fffdf8 0%,
+          var(--paper) 60%
+        );
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+        font-size: clamp(1.0625rem, 0.95rem + 0.4vw, 1.1875rem);
+        line-height: 1.7;
       }
+
       main {
-        max-width: 32rem;
+        max-width: 40rem;
+        margin: 0 auto;
       }
+
+      .eyebrow {
+        margin: 0 0 1rem;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
       h1 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
+        margin: 0 0 0.35rem;
+        font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem);
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+      }
+
+      h2 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.45rem, 1.2rem + 1vw, 1.8rem);
+        font-weight: 400;
+        line-height: 1.25;
+      }
+
+      h3 {
+        margin: 0 0 0.4rem;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      .role {
+        margin: 0 0 1.75rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        color: var(--muted);
+      }
+
+      .lede {
+        max-width: 32rem;
+        margin: 0;
+        font-size: 1.15em;
+        font-style: italic;
+      }
+
+      section {
+        margin-top: 3.5rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--rule);
+      }
+
+      .blocks {
+        display: grid;
+        gap: 1.75rem;
+        margin-top: 1.75rem;
+      }
+
+      .links {
+        display: grid;
+        gap: 0.5rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.18em;
+      }
+
+      a:hover {
+        color: var(--ink);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--rule);
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 30rem) {
+        body {
+          padding: 2.75rem 1.25rem 3.5rem;
+        }
+
+        section {
+          margin-top: 2.75rem;
+          padding-top: 2rem;
+        }
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>Your website will appear here</h1>
-      <p>Describe what you want in OpenCode, then refresh this page to see it.</p>
+      <header>
+        <p class="eyebrow">A small personal page</p>
+        <h1>Sam Rivera</h1>
+        <p class="role">History and English literature, first year</p>
+        <p class="lede">
+          I like old books, long walks, and asking "but why?" one more time than
+          is polite.
+        </p>
+      </header>
+
+      <section aria-labelledby="idea-heading">
+        <p class="eyebrow">The idea I care about</p>
+        <h2 id="idea-heading">The Socratic method</h2>
+        <p>
+          A way of teaching that asks questions instead of handing over answers.
+        </p>
+
+        <div class="blocks">
+          <div>
+            <h3>Why it matters to me</h3>
+            <p>
+              It treats a classroom as a place where everyone thinks out loud,
+              not a place where one person already has the answer.
+            </p>
+          </div>
+
+          <div>
+            <h3>Who I would explore it with</h3>
+            <p>Other first-year students who feel nervous about speaking up.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="links-heading">
+        <p class="eyebrow">Elsewhere</p>
+        <h2 id="links-heading">Links</h2>
+        <ul class="links">
+          <li>
+            <a href="https://github.com/example" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com/reading-list" target="_blank" rel="noopener noreferrer">
+              A reading list
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>One page, made by hand with plain HTML and CSS.</p>
+      </footer>
     </main>
   </body>
 </html>
